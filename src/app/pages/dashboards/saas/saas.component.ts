@@ -4,6 +4,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { earningLineChart, salesAnalyticsDonutChart, ChatData } from './data';
 import { ChartType, ChatMessage } from './saas.model';
 import { ConfigService } from '../../../core/services/config.service';
+import {ApexOptions} from "ng-apexcharts";
 
 @Component({
   selector: 'app-saas',
@@ -20,7 +21,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
   // bread crumb items
   breadCrumbItems: Array<{}>;
 
-  earningLineChart: ChartType;
+  earningLineChart: ApexOptions;
   salesAnalyticsDonutChart: ChartType;
   ChatData: ChatMessage[];
 
@@ -90,7 +91,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.scrollRef.SimpleBar.getScrollElement().scrollTop = 500;
+    //this.scrollRef.SimpleBar.getScrollElement().scrollTop = 500;
   }
 
   onListScroll() {
@@ -115,7 +116,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
             previousamount: "784.04",
             series: [
               {
-                name: "series1",
+                name: "Clicks",
                 data: [22, 35, 20, 41, 51, 42, 49, 45, 58, 42, 75, 48],
               },
             ],
@@ -133,7 +134,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
             previousamount: "784.04",
             series: [
               {
-                name: "series1",
+                name: "Clicks",
                 data: [22, 28, 31, 34, 40, 52, 29, 45, 68, 60, 47, 12],
               },
             ],
@@ -151,7 +152,7 @@ export class SaasComponent implements OnInit, AfterViewInit {
             previousamount: "684.04",
             series: [
               {
-                name: "series1",
+                name: "Clicks",
                 data: [28, 30, 48, 50, 47, 40, 35, 48, 56, 42, 65, 41],
               },
             ],

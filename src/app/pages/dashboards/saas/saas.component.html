@@ -52,9 +52,9 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 d-none d-lg-block">
+                        <div class="col-lg-4 d-none d-lg-block align-self-center">
                             <div class="dropdown float-end">
-                                <a [routerLink]="'/new-campaign'" class="btn btn-primary btn-sm">Create Campaign <i
+                                <a [routerLink]="'/new-campaign'" class="btn btn-primary btn-lg">Create Campaign <i
                                         class="mdi mdi-plus-thick ms-1"></i></a>
                             </div>
                            <!-- <div class="clearfix  mt-4 mt-lg-0">
@@ -220,9 +220,26 @@
                         </div>
 
                         <div class="col-lg-8">
-                            <apx-chart class="apex-charts" dir="ltr" [series]="item.series"
-                                [chart]="earningLineChart.chart" [colors]="earningLineChart.colors"
-                                [stroke]="earningLineChart.stroke" [dataLabels]="earningLineChart.dataLabels">
+                      <!--      <apx-chart
+                                    [series]="chartOptions.series"
+                                    [chart]="chartOptions.chart"
+                                    [xaxis]="chartOptions.xaxis"
+                                    [dataLabels]="chartOptions.dataLabels"
+                                    [yaxis]="chartOptions.yaxis"
+                                    [colors]="chartOptions.colors"
+                                    [legend]="chartOptions.legend"
+                                    [fill]="chartOptions.fill"
+                            ></apx-chart>-->
+
+                            <apx-chart [series]="earningLineChart.series"
+                                       [chart]="earningLineChart.chart"
+                                       [xaxis]="earningLineChart.xaxis"
+                                       [stroke]="earningLineChart.stroke"
+                                       [tooltip]="earningLineChart.tooltip"
+                                       [fill]="earningLineChart.fill"
+                                       [grid]="earningLineChart.grid"
+                                       [colors]="earningLineChart.colors"
+                                       [dataLabels]="earningLineChart.dataLabels">
                             </apx-chart>
                         </div>
                     </div>
@@ -254,14 +271,14 @@
                             </div>
                             <div class="col-4">
                                 <div class="mt-4">
-                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i>
+                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle me-1" style="color: rgb(99, 179, 237);"></i>
                                         Campaign B</p>
                                     <h5>46.7%</h5>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="mt-4">
-                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-danger me-1"></i>
+                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle me-1" style="rgb(129, 140, 248);"></i>
                                         Campaign C</p>
                                     <h5>31.7%</h5>
                                 </div>

@@ -1,41 +1,81 @@
 import { ChartType } from './saas.model';
+import {ApexOptions} from "ng-apexcharts";
 
-const earningLineChart: ChartType = {
-    series: [{
-        name: 'series1',
-        data: [31, 40, 36, 51, 49, 72, 69, 56, 68, 82, 68, 76]
-    }],
+const earningLineChart: ApexOptions = {
+    series: [
+        {
+            name: "Clicks",
+            data: [31, 40, 28, 51, 42, 109, 100]
+        }
+    ],
     chart: {
-        height: 288,
-        type: 'line',
-        toolbar: 'false',
-        dropShadow: {
-            enabled: true,
-            color: '#000',
-            top: 18,
-            left: 7,
-            blur: 8,
-            opacity: 0.2
+        height: 350,
+        type: "area"
+    },
+    colors    : ['#818CF8'],
+    fill      : {
+        colors: ['#312E81']
+    },
+    grid      : {
+        show       : true,
+        borderColor: '#334155',
+        padding    : {
+            top   : 10,
+            bottom: -40,
+            left  : 0,
+            right : 0
         },
+        position   : 'back',
+        xaxis      : {
+            lines: {
+                show: true
+            }
+        }
     },
     dataLabels: {
         enabled: false
     },
-    colors: ['#556ee6'],
     stroke: {
-        curve: 'smooth',
-        width: 3,
+        curve: "smooth"
     },
+    xaxis: {
+        type: "datetime",
+        categories: [
+            "2018-09-19T00:00:00.000Z",
+            "2018-09-19T01:30:00.000Z",
+            "2018-09-19T02:30:00.000Z",
+            "2018-09-19T03:30:00.000Z",
+            "2018-09-19T04:30:00.000Z",
+            "2018-09-19T05:30:00.000Z",
+            "2018-09-19T06:30:00.000Z"
+        ]
+    },
+    tooltip: {
+        x: {
+            format: "dd/MM/yy HH:mm"
+        }
+    }
 };
 
 const salesAnalyticsDonutChart: ChartType = {
     series: [56, 38, 26],
     chart: {
-        type: 'donut',
+        animations: {
+            speed           : 400,
+            animateGradually: {
+                enabled: false
+            }
+        },
+        fontFamily: 'inherit',
+        foreColor : 'inherit',
+        type      : 'donut',
+        sparkline : {
+            enabled: true
+        },
         height: 240,
     },
-    labels: ['Series A', 'Series B', 'Series C'],
-    colors: ['#556ee6', '#34c38f', '#f46a6a'],
+    labels: ['Campaign A', 'Campaign B', 'Campaign C'],
+    colors     : ['#3182CE', '#63B3ED', '#818CF8'],
     legend: {
         show: false,
     },
