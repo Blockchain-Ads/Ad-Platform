@@ -10,7 +10,7 @@ export const MENU: MenuItem[] = [
         id: 2,
         label: 'MENUITEMS.DASHBOARDS.TEXT',
         icon: 'bx-home-circle',
-        link: '/dashboards/saas',
+        link: '/dashboard',
 
        /* subItems: [
           /!*  {
@@ -52,7 +52,7 @@ export const MENU: MenuItem[] = [
         id: 9,
         label: 'Campaigns',
         icon: 'bx-calendar',
-        link: '/calendar',
+        link: '/campaigns',
     },
     {
         id: 10,

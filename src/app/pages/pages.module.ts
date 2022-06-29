@@ -41,6 +41,7 @@ import {CampaignsModule} from "./campaigns/campaigns.module";
 import {NewCampaignComponent} from "./campaigns/new-campaign/new-campaign.component";
 import {ArchwizardModule} from "angular-archwizard";
 import {NgSelectModule} from "@ng-select/ng-select";
+import {CampaignsComponent} from "./campaigns/campaigns/campaigns.component";
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -49,7 +50,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 ]);
 
 @NgModule({
-  declarations: [CalendarComponent, ChatComponent, FilemanagerComponent, NewCampaignComponent],
+  declarations: [CalendarComponent, ChatComponent, FilemanagerComponent, NewCampaignComponent, CampaignsComponent],
   imports: [
     CommonModule,
     FormsModule,

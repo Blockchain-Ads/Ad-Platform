@@ -6,12 +6,15 @@ import { ChatComponent } from './chat/chat.component';
 import { DefaultComponent } from './dashboards/default/default.component';
 import { FilemanagerComponent } from './filemanager/filemanager.component';
 import {NewCampaignComponent} from "./campaigns/new-campaign/new-campaign.component";
+import {CampaignsComponent} from "./campaigns/campaigns/campaigns.component";
+import {SaasComponent} from "./dashboards/saas/saas.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard' },
  
-  { path: 'dashboard', component: DefaultComponent },
+  { path: 'dashboard', component: SaasComponent },
   { path: 'new-campaign', component: NewCampaignComponent },
+  { path: 'campaigns', component: CampaignsComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'chat', component: ChatComponent },
   { path: 'filemanager', component: FilemanagerComponent },

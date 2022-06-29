@@ -16,7 +16,9 @@ export class TransactionComponent implements OnInit {
     date?: string,
     total?: string,
     status?: string,
-    payment?: string[],
+    payment?: string,
+    ctr?: string[],
+    cvr?: string[]
   }>;
 
   constructor(private modalService: NgbModal) { }

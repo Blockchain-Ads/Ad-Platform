@@ -1,0 +1,164 @@
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box d-flex align-items-center justify-content-between">
+                <div>
+                    <h4 class="mb-0 font-size-18">All Campaigns</h4>
+                    <p>Monitor metrics, check reports and review performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="float-end">
+                            <div class="input-group input-group-sm">
+                                <select class="form-select form-select-sm" (change)="selectDate($event.target.value)">
+                                    <option value="today" >Today</option>
+                                    <option value="this_week">This week</option>
+                                    <option value="this_month" selected>This month</option>
+                                    <option value="this_year">This year</option>
+                                    <option value="custom">Custom</option>
+                                </select>
+                                <label class="input-group-text">Month</label>
+                            </div>
+                        </div>
+                        <h4 class="card-title mb-4">Clicks</h4>
+                    </div>
+
+                    <div class="row" *ngFor="let item of sassEarning">
+                        <div class="col-lg-12">
+                            <apx-chart [series]="earningLineChart.series"
+                                       #chart
+                                       [legend]="earningLineChart.legend"
+                                       [chart]="earningLineChart.chart"
+                                       [xaxis]="earningLineChart.xaxis"
+                                       [stroke]="earningLineChart.stroke"
+                                       [tooltip]="earningLineChart.tooltip"
+                                       [fill]="earningLineChart.fill"
+                                       [grid]="earningLineChart.grid"
+                                       [colors]="earningLineChart.colors"
+                                       [dataLabels]="earningLineChart.dataLabels">
+                            </apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <p class="text-muted mb-4"><i
+                                class="bx bx-support h2 text-info align-middle mb-0 me-3" style="color: #f1b44c; !important;"></i> Conversations </p>
+                        <span class="mb-4 font-size-12 btn btn-outline-light py-1 px-2">30 days</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <h5>9,134</h5>
+                                <p class="text-muted text-truncate mb-0">+ 0.0012 ( 0.2 % ) <i
+                                        class="mdi mdi-arrow-up ms-1 text-success"></i></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <apx-chart class="apex-charts" dir="ltr" [series]="bitconinChart.series"
+                                           [chart]="bitconinChart.chart" [stroke]="bitconinChart.stroke"
+                                           [colors]="bitconinChart.colors" [fill]="bitconinChart.fill"
+                                           [tooltip]="bitconinChart.tooltip"></apx-chart>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <p class="text-muted mb-4"><i
+                                class="mdi mdi-eye h2 text-info align-middle mb-0 me-3" style="color: #3452e1; !important;"></i> Impressions </p>
+                        <span class="mb-4 font-size-12  btn btn-outline-light py-1 px-2">30 days</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <h5>20,450</h5>
+                                <p class="text-muted text-truncate mb-0">- 4.102 ( 0.1 % ) <i
+                                        class="mdi mdi-arrow-down ms-1 text-danger"></i></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <apx-chart class="apex-charts" dir="ltr" [series]="ethereumChart.series"
+                                           [chart]="ethereumChart.chart" [stroke]="ethereumChart.stroke"
+                                           [colors]="ethereumChart.colors" [fill]="ethereumChart.fill"
+                                           [tooltip]="ethereumChart.tooltip"></apx-chart>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <p class="text-muted mb-4"><i
+                                class="bx bxs-report h2 text-info align-middle mb-0 me-3" style="color: #50a5f1; !important;"></i> Visits </p>
+                        <span class="mb-4 font-size-12  btn btn-outline-light py-1 px-2">30 days</span>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <h5>6,300</h5>
+                                <p class="text-muted text-truncate mb-0">+ 1.792 ( 0.1 % ) <i
+                                        class="mdi mdi-arrow-up ms-1 text-success"></i></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <apx-chart class="apex-charts" dir="ltr" [series]="litecoinChart.series"
+                                           [chart]="litecoinChart.chart" [stroke]="litecoinChart.stroke"
+                                           [colors]="litecoinChart.colors" [fill]="litecoinChart.fill"
+                                           [tooltip]="litecoinChart.tooltip"></apx-chart>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0 font-size-18 ">Campaigns</h4>
+                            <span class="mb-0 font-size-16 btn btn-outline-light py-1 px-2">7 days</span>
+                    </div>
+<!--
+                    <h4 class="card-title mb-4">Campaigns</h4>
+-->
+                    <app-transaction [transactions]="transactions"></app-transaction>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

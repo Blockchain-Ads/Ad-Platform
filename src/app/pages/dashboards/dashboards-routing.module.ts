@@ -9,7 +9,7 @@ import { BlogComponent } from './blog/blog.component';
 const routes: Routes = [
     {
         path: 'default',
-        component: DefaultComponent
+        component: SaasComponent
     },
     {
         path: 'saas',
